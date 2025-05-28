@@ -1,0 +1,11 @@
+streamlit
+PyMuPDF
+faiss-cpu
+torch
+numpy
+nltk
+rank_bm25
+transformers
+google-cloud-storage
+requests
+tqdm
