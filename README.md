@@ -33,4 +33,4 @@ Answers and sources are exported to `qa_export.csv` with APA citations.
 
 ---
 
-Built by [Your Name], 2025.
+Built by [Jesse Watson], 2025.
