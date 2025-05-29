@@ -59,8 +59,8 @@ tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModel.from_pretrained(model_id).to("cuda" if torch.cuda.is_available() else "cpu")
 
 # Perplexity API setup
-PPLX_API_KEY = "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"
-PPLX_API_URL = "https://api.perplexity.ai/chat/completions"
+PPLX_API_KEY = "HIDDEN"
+PPLX_API_URL = "HIDDEN"
 PPLX_MODEL = "sonar-pro"
 headers = {
     "Content-Type": "application/json",
