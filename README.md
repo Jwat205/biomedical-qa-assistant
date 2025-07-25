@@ -1,93 +1,36 @@
-"""
 # 🧬 Biomedical QA Assistant
 
-AI-powered Streamlit assistant for biomedical research using BioBERT + Perplexity + FAISS.
+This is a Streamlit-based AI assistant that answers biomedical questions by searching and summarizing scientific papers. It uses:
 
-## 🚀 Quick Start
-
-1. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Set up Google Cloud credentials:**
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="your-service-account.json"
-   ```
-
-3. **Add your API keys:**
-   - Create a `.env` file with your Perplexity or OpenAI key
-   - Or add them directly in the code
-
-4. **Update PDF filenames:**
-   - Upload biomedical PDFs to your GCS bucket
-   - Update the filenames in `app.py`
-
-5. **Run the app:**
-   ```bash
-   streamlit run app.py
-   ```
-
-## 📊 Features
-
-- 🔍 FAISS + BM25 hybrid semantic retrieval
-- 🧠 BioBERT for biomedical embeddings  
-- 💬 Perplexity AI or ChatGPT for fluent answers
-- 📄 Google Cloud Storage for PDF hosting
+- 🔍 FAISS + BM25 for hybrid semantic retrieval
+- 🧠 BioBERT for biomedical embeddings
+- 💬 Perplexity AI or ChatGPT for fluent, citation-based answers
+- 📄 Google Cloud Storage for hosting PDFs
 - 📚 APA citation formatting
-- 📥 Export answers to CSV
 
-## 📁 Current Files
+## 🚀 Usage
 
-- `app.py` - Main Streamlit application
-- `requirements.txt` - Python dependencies
-- `qa_export.csv` - Generated Q&A exports (created when you export)
-
-## ⚙️ Configuration
-
-Create a `.env` file:
-```
-PERPLEXITY_API_KEY=your_key_here
-OPENAI_API_KEY=your_key_here
+```bash
+pip install -r requirements.txt
+streamlit run app.py
 ```
 
-## 🤝 Contributing
+## 🔐 Secrets Setup
 
-Built by Jesse Watson, 2025. Feel free to contribute!
+- Set your Google Cloud credentials:
+  ```bash
+  export GOOGLE_APPLICATION_CREDENTIALS="your-service-account.json"
+  ```
+- Add your Perplexity or OpenAI key directly in the code or use `.env` and `python-dotenv`
 
-## 📞 Support
+## 🧪 Example PDFs
 
-For issues or questions, please open a GitHub issue.
-"""
+Upload biomedical PDFs to your GCS bucket and update the filenames in `app.py`.
 
-# Step 2: Add this .env.example file (completely safe):
-"""
-# Copy this to .env and fill in your actual keys
-PERPLEXITY_API_KEY=your_perplexity_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here
-"""
+## 📤 Exports
 
-# Step 3: Add this .gitignore file (safe - just prevents committing sensitive files):
-"""
-# Environment variables
-.env
+Answers and sources are exported to `qa_export.csv` with APA citations.
 
-# Python cache
-__pycache__/
-*.pyc
+---
 
-# Streamlit
-.streamlit/
-
-# Google Cloud credentials
-*.json
-service-account*.json
-
-# Data exports
-*.csv
-exports/
-
-# IDE files
-.vscode/
-.idea/
-"""
+Built by [Jesse Watson], 2025.
