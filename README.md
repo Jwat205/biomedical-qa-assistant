@@ -1,8 +1,3 @@
-# First, let's just improve your README.md with better documentation
-# This is 100% safe and won't break anything
-
-# Step 1: Just update your README.md with this content:
-
 """
 # 🧬 Biomedical QA Assistant
 
